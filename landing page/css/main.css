@@ -1,17 +1,22 @@
+/* MOBILE STYLES */
+/* All the following styling is for the mobile layout only and is broken in sections */
 html {
     font-family: 'Montserrat', sans-serif;
     background-color: #f7f7ff;
 }
 
+body {
+    margin: 0;
+}
 * {
     box-sizing: border-box;
 }
 
 .main {
-   padding: 0 1.25rem; 
-   /* display: grid;
+   padding: 0 1.75rem; 
+   display: grid;
    grid-template-columns: repeat(1, auto);
-   grid-template-rows: repeat(2, auto); */
+   grid-template-rows: repeat(2, auto);
 }
 
 .header img {
@@ -63,7 +68,7 @@ h2 {
 }
 
 ::placeholder{
-    padding-left: 4%;
+    padding-left: 4.50%;
 }
 
 .label {
@@ -85,7 +90,7 @@ h2 {
     width: 100%;
     display: block;
     background-color: #57eeab;
-    padding: 1rem;
+    padding: 0.75rem;
     border-radius: 10px;
     border: none;
     font-size: 32px;
@@ -100,8 +105,7 @@ a {
 
 .footer {
     background-color: #fffd8c;
-    /* margin: 0 -1rem; */
-    padding: 2.75rem;
+    padding: 1.75rem 2.75rem;
     width: 100%;
 }
 
@@ -125,7 +129,7 @@ h3 {
     border: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    text-align: center;
+    text-align: left;
 }
 
 #city {
@@ -136,13 +140,13 @@ h3 {
     border: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    /* text-align: center; */
+    text-align: left;
 }
 
 #btn-2 {
     width: 90%;
     background-color: #ff8480;
-    padding: 2%;
+    padding: 1%;
     border-radius: 10px;
     border: none;
     font-size: 32px;
@@ -157,12 +161,16 @@ h3 {
     justify-content: space-evenly;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 
 @media only screen and (min-width: 630px) and (max-width: 1080px) {
 .main {
     padding: 0 2.25rem;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(2, auto);
 }
 
 .div-1 hi {
@@ -171,15 +179,20 @@ h3 {
 .div-1 p {
     font-size: 37px;
 }
+
 .div-3 {
     margin: 0 auto;
 }
+
 .div-5 {
     display: inline-block;
 }
+
 .footer-form {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
 }
 #hours {
     margin-right: 2%;
@@ -189,18 +202,16 @@ h3 {
 }
 .div-6 {
     margin-top: 2rem;
-    /* display: flex;
-    justify-content: center;
-    justify-content: space-around; */
 }
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1080px){
     .main {
         background-image: url(../images/scooter.svg);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 50%;
+        background-size: 47%;
+        background-position-y: 125px;
         padding: 0 5rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -209,42 +220,72 @@ h3 {
         "header header header"
         "text image form";
     }
+
     .header {
         grid-area: header;
     }
     .div-1 {
            grid-area: text;
     }
+
     .div-2 {
         display: none;
         grid-area: image;
     }
+
     .div-3 {
         grid-area: form;
     }
+
     .header img {
         width: 100px;
         height: auto;
     }
+
     .div-1 h1 {
         font-size: 60px;
     }
     .div-1 p {
         font-size: 20px;
     }
-    /* .div-2 img {
-        width: 150%;
-        height: 150%;
-    } */
+
     .div-3{
-        display: block;
-    }
-    .div-5 {
         display: inline-block;
     }
+
+    .site-form p {
+        margin-top: 0%;
+    }
+
+    .footer {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+        "hours icon"
+        "calculate icon";
+    }
+
+    .div-4 {
+        grid-area: hours;
+    }
+
+    .div-5 {
+        grid-area: calculate;
+        display: inline-block;
+    }
+
+    .div-6 {
+        grid-area: icon;
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .footer-form {
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
     }
     #hours {
         margin-right: 2%;
@@ -252,12 +293,8 @@ h3 {
     #city {
         margin-right: 2%;
     }
-    .div-6 {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
     .div-6 img {
-        padding: 20px;
+        padding: 15px;
     }
+
 }
