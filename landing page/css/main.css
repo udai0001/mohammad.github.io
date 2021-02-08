@@ -1,5 +1,7 @@
-/* MOBILE STYLES */
-/* All the following styling is for the mobile layout only and is broken in sections */
+/* MOBILE LAYOUT */
+/* All the following styling is for the mobile layout only, and is broken in sections */
+
+/* universal styling - applies to the entire document for all screen sizes */
 html {
     font-family: 'Montserrat', sans-serif;
     background-color: #f7f7ff;
@@ -8,9 +10,12 @@ html {
 body {
     margin: 0;
 }
+
 * {
     box-sizing: border-box;
 }
+
+/* Main page styling (MOBILE) */
 
 .main {
    padding: 0 1.75rem; 
@@ -38,6 +43,9 @@ body {
     height: auto;
 }
 
+/* Styling of the main form begins */
+
+/* Styling of the container */
 .div-3 {
     background-color: white;
     border-radius: 20px;
@@ -46,6 +54,7 @@ body {
     display: inline-block;
 }
 
+/* Styling of the inline elements (form) */
 h2 {
     font-size: 50px;
     margin-bottom: 0rem;
@@ -76,7 +85,6 @@ h2 {
 }
 
 #terms {
-    
     font-size: 17px;
 }
 
@@ -102,13 +110,16 @@ a {
     text-decoration: none;
     color: #ff8480;
 }
+/* Styling of the main form ends */
 
+/* Footer styling begins */
 .footer {
     background-color: #fffd8c;
     padding: 1.75rem 2.75rem;
     width: 100%;
 }
 
+/* Styling of the footer inline elements */
 h3 {
     font-size: 25px;
     font-weight: 600;
@@ -163,9 +174,15 @@ h3 {
     flex-direction: row;
     align-items: center;
 }
+/* Footer styling ends */
+/* MOBILE layout and styling ends */
+/* ----------------------------------------------------------------------------------- */
 
-
+/* TABLET LAYOUT & STYLES */
 @media only screen and (min-width: 630px) and (max-width: 1080px) {
+
+/* Main page styling */
+/* Adding minor tweaks by changing font sizes, margins and display */
 .main {
     padding: 0 2.25rem;
     display: grid;
@@ -173,9 +190,10 @@ h3 {
     grid-template-rows: repeat(2, auto);
 }
 
-.div-1 hi {
+.div-1 h1 {
     font-size: 82px;
 }
+
 .div-1 p {
     font-size: 37px;
 }
@@ -188,23 +206,34 @@ h3 {
     display: inline-block;
 }
 
+/* Footer styling */
+/* Adding flex to change the layout for responsiveness */
 .footer-form {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     justify-content: center;
 }
+
 #hours {
     margin-right: 2%;
 }
+
 #city {
     margin-right: 2%;
 }
+
 .div-6 {
     margin-top: 2rem;
 }
 }
+/* TABLET layout ends */
+/* ----------------------------------------------------------------------------------- */
 
+/* DESKTOP LAYOUT */
+
+/* Adding a grid for responsiveness */
+/* Replacing the scooter image by making it a background image */
 @media only screen and (min-width: 1080px){
     .main {
         background-image: url(../images/scooter.svg);
@@ -224,6 +253,7 @@ h3 {
     .header {
         grid-area: header;
     }
+
     .div-1 {
            grid-area: text;
     }
@@ -237,6 +267,7 @@ h3 {
         grid-area: form;
     }
 
+/* Resizing elements according to the layout */
     .header img {
         width: 100px;
         height: auto;
@@ -245,6 +276,7 @@ h3 {
     .div-1 h1 {
         font-size: 60px;
     }
+
     .div-1 p {
         font-size: 20px;
     }
@@ -257,6 +289,8 @@ h3 {
         margin-top: 0%;
     }
 
+/* Styling the footer */
+/* Adding a grid to the footer for better responsiveness */
     .footer {
         margin-top: 2rem;
         display: grid;
@@ -287,14 +321,18 @@ h3 {
         justify-content: space-evenly;
         align-items: center;
     }
+
     #hours {
         margin-right: 2%;
     }
+
     #city {
         margin-right: 2%;
     }
+
     .div-6 img {
         padding: 15px;
     }
 
 }
+/* DESKTOP layout ends */
