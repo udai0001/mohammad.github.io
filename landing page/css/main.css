@@ -5,6 +5,7 @@
 html {
     font-family: 'Montserrat', sans-serif;
     background-color: #f7f7ff;
+    color: #333131;
 }
 
 body {
@@ -25,7 +26,7 @@ body {
 }
 
 .header img {
-    width: 200px;
+    max-width: 200px;
     height: auto;
 }
 
@@ -38,8 +39,9 @@ body {
     font-size: 34px;
 }
 
+
 .div-2 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -54,6 +56,7 @@ body {
     display: inline-block;
 }
 
+
 /* Styling of the inline elements (form) */
 h2 {
     font-size: 50px;
@@ -64,6 +67,10 @@ h2 {
     font-size: 20px;
 }
 
+.p2 {
+    display: none;
+}
+
 .div-3 input {
     width: 100%;
     border-radius: 15px;
@@ -72,6 +79,7 @@ h2 {
     padding: 15px 0px;
     border: none;
     font-family: 'Montserrat', sans-serif;
+    color: #333131;
     font-size: 16px;
     text-align: left;
 }
@@ -104,6 +112,7 @@ h2 {
     font-size: 32px;
     font-weight: 700;
     font-family: 'Montserrat';
+    color: #333131;
 }
 
 a {
@@ -139,6 +148,7 @@ h3 {
     padding: 12px 0px;
     border: none;
     font-family: 'Montserrat', sans-serif;
+    color: #333131;
     font-size: 16px;
     text-align: left;
 }
@@ -150,6 +160,7 @@ h3 {
     padding: 15px 0px;
     border: none;
     font-family: 'Montserrat', sans-serif;
+    color: #333131;
     font-size: 16px;
     text-align: left;
 }
@@ -174,6 +185,11 @@ h3 {
     flex-direction: row;
     align-items: center;
 }
+
+.fb {
+    border-radius: 15px;
+}
+
 /* Footer styling ends */
 /* MOBILE layout and styling ends */
 /* ----------------------------------------------------------------------------------- */
@@ -198,8 +214,13 @@ h3 {
     font-size: 37px;
 }
 
+
 .div-3 {
     margin: 0 auto;
+}
+
+.p2 { 
+    display: none;
 }
 
 .div-5 {
@@ -225,6 +246,10 @@ h3 {
 
 .div-6 {
     margin-top: 2rem;
+}
+
+.fb {
+    border-radius: 15px;
 }
 }
 /* TABLET layout ends */
@@ -269,7 +294,7 @@ h3 {
 
 /* Resizing elements according to the layout */
     .header img {
-        width: 100px;
+        max-width: 100px;
         height: auto;
     }
 
@@ -283,6 +308,14 @@ h3 {
 
     .div-3{
         display: inline-block;
+    }
+
+    .p1 {
+        display: none;
+    }
+
+    .p2 {
+        display: block;
     }
 
     .site-form p {
@@ -332,6 +365,14 @@ h3 {
 
     .div-6 img {
         padding: 15px;
+    }
+
+    .fb {
+        order: 1;
+    }
+
+    .linkedin {
+        order: 2;
     }
 
 }
