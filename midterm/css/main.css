@@ -54,9 +54,15 @@ html {
     font-size: 16px;
     box-sizing: border-box;
 }
+
 body {
     line-height: 1.5;
 }
+
+/* main {
+    margin-left: 5%;
+    margin-right: 5%;
+} */
 
 *,
 *::after,
@@ -64,16 +70,29 @@ body {
     box-sizing: inherit;
     line-height: inherit;
 }
+
 h1 {
     font-size: 40px;
+    font-weight: bold;
+    color: #3c3b3a;
 }
 
 h2 {
     font-size: 32px;
+    color: #3c3b3a;
+    font-weight: bold;
 }
 
 h3 {
     font-size: 24px;
+    color: #3c3b3a;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    color: #3c3b3a;
+    line-height: 38px;
 }
 
 /* HEADER STYLES */
@@ -101,6 +120,121 @@ a:active {
     font-weight: bolder;
 }
 
+/* MAIN BODY */
+.discover {
+    padding: 0 5%
+}
+
+.activities {
+    text-align: center;
+    font-size: 32px;
+    color: #3c3b3a;
+    
+}
+
+.activities p {
+    color: #26a682;
+    font-family: 'Raleway', sans-serif;
+}
+
+.started {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    background-color: #26a682;
+    color: #f2f2f2;
+    text-decoration: none;
+    border: none;
+    width: 250px;
+    display: block;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 26px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.reading {
+    text-align: center;
+}
+.reading img {
+    max-width: 80%;
+    height: auto;
+}
+
+.school img {
+    max-width: 100%;
+    height: auto;
+}
+
+.algonquin {
+    padding: 0 5%;
+}
+
+.algonquin h2 {
+    font-style: italic;
+}
+
+.algonquin h3 {
+    color: #26a682;
+}
+
+.btn2 {
+    background-color: #26a682;
+    color: #f2f2f2;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    width: 150px;
+    font-weight: bold;
+    padding: 2%;
+    font-size: 18px;
+}
+
+.president {
+    background-color: #3c3b3a;
+    text-align: center;
+    padding-bottom: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.president h2 {
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 24px;
+}
+.president p {
+    color: #f2f2f2;
+    text-align: left;
+    margin-bottom: 5%;
+}
+.president img {
+    margin-top: 10%;
+    margin-bottom: 5%;
+    max-width: 50%;
+    height: auto;
+    border-radius: 300px;
+    border: 5px solid #f2f2f2;
+}
+
+.entertainment img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ent {
+    padding: 0 5%
+}
+
+.ent h2 {
+    font-style: italic;
+}
+
+.ent h3 {
+    color: #26a682;
+}
+
 /* FOOTER STYLES */
 .site-footer {
     background-color: #3c3b3a;
@@ -118,7 +252,8 @@ a:active {
 }
 .btp {
     text-align: end;
-    margin-right: 2%;
+    margin-right: 10%;
+    font-size: 35px;
 }
 .btp i {
     color: #26a682;
@@ -127,4 +262,24 @@ a:active {
 }
 .btp p {
     color: #f2f2f2;
+}
+
+/* ------- TABLET --------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    
+    .header {
+        display: flex;
+    }
+
+    nav {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    nav a {
+        padding-left: 5%;
+    }
 }

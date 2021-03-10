@@ -108,12 +108,16 @@ p {
 
 a:visited,
 a:hover,
-a:focus,
 a:active {
     font-weight: bolder;
 }
 
 /* -------------------- */
+main {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(4, auto);
+}
 
 .hear img {
     max-width: 100%;
@@ -121,14 +125,19 @@ a:active {
 }
 .contact h2 {
     color: #f2f2f2;
+    padding-top: 15px;
 }
-.conform {
+.contact-form {
     background-color: #26a682;
     border-radius: 20px;
     padding: .2rem 1rem;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
     display: inline-block;
     font-size: 14px;
+    margin: 0 auto;
+    line-height: 30px;
+    width: 80%;
+    
 }
 .conform label {
     color: #f2f2f2;
@@ -160,7 +169,8 @@ a:active {
 }
 
 .sbt{
-    width: 100%;
+    width: 300px;
+    border: none;
     display: block;
     background-color: #3c3b3a;
     border-radius: 20px;
@@ -168,6 +178,10 @@ a:active {
     font-weight: bold;
     font-size: 20px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+iframe {
+    width: 100%;
 }
 /* --------------------- */
 /* FOOTER STYLES */
@@ -196,4 +210,58 @@ a:active {
 }
 .btp p {
     color: #f2f2f2;
+}
+
+/* ------- TABLET --------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(1 , auto);
+        grid-template-rows: repeat(4, auto);
+    }
+    .header {
+        display: flex;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+/* --------- DESKTOP ---------- */
+@media only screen and (min-width: 1024px) {
+    main {
+        margin-top: 7%;
+        margin-bottom: -12%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "hear contact"
+        "location map";
+    }
+
+    .hear {
+        grid-area: hear;
+    }
+
+    .conform {
+        grid-area: contact;
+    }
+
+    .location {
+        grid-area: location;
+    }
+
+    .map {
+        grid-area: map;
+    }
+
+    .contact-form {
+        line-height: 42px;
+        margin-bottom: 20%;
+    }
 }
