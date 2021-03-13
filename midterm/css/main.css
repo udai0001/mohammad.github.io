@@ -59,11 +59,6 @@ body {
     line-height: 1.5;
 }
 
-/* main {
-    margin-left: 5%;
-    margin-right: 5%;
-} */
-
 *,
 *::after,
 *::before {
@@ -104,7 +99,7 @@ p {
 }
 
 .header img {
-    width: 140px;
+    width: 150px;
     height: 120px;
 }
 
@@ -122,7 +117,7 @@ a:active {
 
 /* MAIN BODY */
 .discover {
-    padding: 0 5%
+    padding: 0 8%
 }
 
 .activities {
@@ -147,8 +142,9 @@ a:active {
     text-decoration: none;
     border: none;
     width: 250px;
+    height: 60px;
     display: block;
-    border-radius: 20px;
+    border-radius: 25px;
     font-weight: bold;
     font-size: 26px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
@@ -158,8 +154,25 @@ a:active {
     text-align: center;
 }
 .reading img {
-    max-width: 80%;
+    max-width: 60%;
     height: auto;
+    margin-bottom: 10%;
+}
+
+.scroll {
+    text-align: center;
+    font-size: 35px;
+    /* margin-bottom: 5%; */
+    line-height: 1px;
+}
+
+.scroll i {
+    color: #26a682;
+    /* display: block; */
+}
+
+.scroll {
+    display: none;
 }
 
 .school img {
@@ -168,7 +181,7 @@ a:active {
 }
 
 .algonquin {
-    padding: 0 5%;
+    padding: 0 8%;
 }
 
 .algonquin h2 {
@@ -179,25 +192,31 @@ a:active {
     color: #26a682;
 }
 
+.algonquin button {
+    
+}
+
 .btn2 {
     background-color: #26a682;
     color: #f2f2f2;
     text-decoration: none;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
     width: 150px;
     font-weight: bold;
     padding: 2%;
     font-size: 18px;
+    float: right;
 }
 
 .president {
     background-color: #3c3b3a;
     text-align: center;
     padding-bottom: 10%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-top: 5%;
 }
 .president h2 {
     color: #f2f2f2;
@@ -212,7 +231,7 @@ a:active {
 .president img {
     margin-top: 10%;
     margin-bottom: 5%;
-    max-width: 50%;
+    width: 150px;
     height: auto;
     border-radius: 300px;
     border: 5px solid #f2f2f2;
@@ -224,7 +243,7 @@ a:active {
 }
 
 .ent {
-    padding: 0 5%
+    padding: 0 8%
 }
 
 .ent h2 {
@@ -267,9 +286,15 @@ a:active {
 /* ------- TABLET --------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
-    
+    main {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(8, auto);
+    }
+
     .header {
         display: flex;
+        padding: 0 7%;
     }
 
     nav {
@@ -282,4 +307,241 @@ a:active {
     nav a {
         padding-left: 5%;
     }
+
+    h1 {
+        font-size: 72px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .activities {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .btn {
+        font-size: 32px;
+    }
+
+    .reading img {
+        margin-bottom: 10%;
+    }
+
+    .scroll {
+        display: contents;
+    }
+
+    .school {
+        width: 100%;
+        height: 65%;
+        overflow: hidden;
+        margin-top: 5%;
+    }
+
+    .school img {
+        max-width: 100%;
+        height: auto;
+        margin-top: -30%;
+    }
+
+    .president {
+        padding-bottom: 5%;
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+        "image text"
+        "title text";
+    }
+
+    .president img {
+        grid-area: image;
+        width: 200px
+    }
+
+    .president h2 {
+        grid-area: title;
+        padding-right: 44%;
+        font-size: 24px;
+    }
+
+    .president p {
+        grid-area: text;
+        font-size: 22px;
+        padding-top: 10%;
+    }
+
+    .entertainment {
+        width: 100%;
+        height: 56%;
+        overflow: hidden;
+    }
+
+    .entertainment img {
+        max-width: 100%;
+        height: auto;
+        margin-top: -20%;
+    }
+
+    .ent {
+        margin-top: -15%;
+    }
+
+
+}
+
+/* DESKTOP LAYOUT */
+@media only screen and (min-width: 1024px) {
+    
+    .header {
+        display: flex;
+        padding: 0 7%;
+    }
+
+    nav {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    nav a {
+        padding-left: 5%;
+    }
+    
+    main {
+        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas: 
+        "discover img"
+        "icons img"
+        "button img"
+        "down down"
+        "school algonquin"
+        "president president"
+        "ent entertainment";
+    }
+    .scroll {
+        display: contents;
+    }
+
+    .discover {
+        grid-area: discover;
+        margin: 15% 1% 1% 9%;
+    }
+
+    .activities {
+        grid-area: icons;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1% 14% 1% 14%;
+    }
+
+    .started {
+        grid-area: button;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 15%;
+    }
+
+    .reading {
+        grid-area: img;
+    }
+
+    .scroll {
+        grid-area: down;
+    }
+
+    .school {
+        grid-area: school;
+    }
+
+    .algonquin {
+        grid-area: algonquin;
+        margin-right: 5%;
+        margin-top: 3%;
+    }
+
+    .president {
+        grid-area: president;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-bottom: 0%;
+    }
+
+    .president img {
+        margin-top: 5%;
+    }
+
+    .president h2 {
+        padding-left: 15%;
+        text-align: left;
+    }
+
+    .president p {
+        margin-bottom: 0%;
+        padding-left: 15%;
+     }
+
+    .entertainment {
+        grid-area: entertainment;
+    }
+
+    .ent {
+        grid-area: ent;
+        margin-top: 10%;
+    }
+
+    .reading img {
+        max-width: 90%;
+        height: auto;
+        margin-bottom: 10%;
+        margin: 10% 5% 1% -5%;
+    }
+
+    .school {
+        width: 100%;
+        height: 73%;
+        overflow: hidden;
+        margin-top: 5%;
+    }
+
+    .school img {
+        max-width: 100%;
+        height: auto;
+        margin-top: -15%;
+        margin-bottom: 10%;
+        margin-left: 15%;
+        padding-right: 15%;
+    }
+
+    .entertainment {
+        width: 100%;
+        height: 56%;
+        overflow: hidden;
+        margin-top: 10%;
+        
+    }
+
+    .entertainment img {
+        max-width: 100%;
+        height: auto;
+        margin-top: -13%;
+        margin-bottom: 7%;
+        padding-right: 10%;
+    }
+
 }
