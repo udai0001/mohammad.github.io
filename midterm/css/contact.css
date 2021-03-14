@@ -85,10 +85,13 @@ h3 {
     font-size: 24px;
     color: #3c3b3a;
 }
+
 p {
     font-size: 16px;
     color: #3c3b3a;
 }
+
+/* HEADER STYLES */
 .site-header {
     background-color: #3c3b3a;
 }
@@ -112,7 +115,7 @@ a:active {
     font-weight: bolder;
 }
 
-/* -------------------- */
+/* BODY STYLES */
 main {
     display: grid;
     grid-template-columns: repeat(1, auto);
@@ -139,9 +142,15 @@ main {
     width: 80%;
     
 }
+
+.conform { 
+    padding: 5%;
+}
+
 .conform label {
     color: #f2f2f2;
 }
+
 .conform input {
     width: 100%;
     border-radius: 20px;
@@ -149,17 +158,18 @@ main {
     background-color: #f2f2f2;
     padding: 5px 0px;
     border: none;
-    color: #3c3b3a
+    color: #3c3b3a;
     font-size: 16px;
     text-align: left;
 }
+
 .conform textarea {
     width: 100%;
     border-radius: 10px;
     box-sizing: border-box;
     background-color: #f2f2f2;
     border: none;
-    color: #3c3b3a
+    color: #3c3b3a;
     font-size: 16px;
     text-align: left;
 }
@@ -169,7 +179,7 @@ main {
 }
 
 .sbt{
-    width: 300px;
+    width: 200px;
     border: none;
     display: block;
     background-color: #3c3b3a;
@@ -178,18 +188,29 @@ main {
     font-weight: bold;
     font-size: 20px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    float: right;
+    margin-bottom: 5%;
 }
 
 iframe {
     width: 100%;
 }
+
 /* --------------------- */
 /* FOOTER STYLES */
 .site-footer {
     background-color: #3c3b3a;
+    display: grid;
+    grid-template-columns: 28% 40% 28%;
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: 
+    "empty follow btp";
 }
 .follow {
+    grid-area: follow;
     text-align: center;
+    margin-bottom: 10%;
+    margin-top: 5%;
 }
 
 .follow h3 {
@@ -200,27 +221,38 @@ iframe {
     margin-left: 1%;
 }
 .btp {
-    text-align: end;
-    margin-right: 10%;
+    grid-area: btp;
+    text-align: center;
     font-size: 35px;
+    margin-top: 10%;
 }
+
+@keyframes rotation {
+    from {
+            transform: rotate(0deg);
+    }
+    to {
+            transform: rotate(359deg);
+    }
+}
+
 .btp i {
     color: #26a682;
     width: 20px;
     height: 20px;
+    animation: rotation 4s infinite linear;
 }
 .btp p {
     color: #f2f2f2;
 }
 
+.btp a {
+    text-decoration: none;
+}
+
 /* ------- TABLET --------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
-    main {
-        display: grid;
-        grid-template-columns: repeat(1 , auto);
-        grid-template-rows: repeat(4, auto);
-    }
     .header {
         display: flex;
         padding: 0 7%;
@@ -235,6 +267,12 @@ iframe {
 
     nav a {
         padding-left: 5%;
+    }
+    
+    main {
+        display: grid;
+        grid-template-columns: repeat(1 , auto);
+        grid-template-rows: repeat(4, auto);
     }
 }
 

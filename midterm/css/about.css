@@ -49,6 +49,7 @@ table {
 /* --------------------------------------------------------------------
                            Custom Styles
 ----------------------------------------------------------------------- */
+
 html {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
@@ -65,6 +66,30 @@ body {
     line-height: inherit;
 }
 
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #3c3b3a;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #3c3b3a;
+}
+
+h3 {
+    font-size: 24px;
+    color: #3c3b3a;
+}
+
+p {
+    font-size: 20px;
+    color: #3c3b3a;
+    line-height: 38px;
+}
+
+/* HEADER STYLES */
 .site-header {
     background-color: #3c3b3a;
 }
@@ -73,7 +98,7 @@ body {
 }
 
 .header img {
-    width: 140px;
+    width: 150px;
     height: 120px;
 }
 
@@ -89,12 +114,390 @@ a:active {
     font-weight: bolder;
 }
 
+/* BODY STYLES */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(1 , auto);
+    grid-template-rows: repeat(11, auto);
+}
+
+.construction {
+    padding: 4% 8%;
+}
+.const {
+    text-align: center;
+}
+.const img {
+    max-width: 80%;
+    height: auto;
+    padding: 5% 0%;
+}
+
+.about-banner {
+    background-image: url(../images/about.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.layer {
+    background-color: rgba(27, 116, 91, 0.5);
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+.about-banner h2 {
+    color: #f2f2f2;
+    position: relative;
+    top: 40%;
+    font-size: 50px;
+}
+
+.www {
+    padding: 4% 8%;
+    background-color: #f2f2f2;
+}
+
+.www h3 {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.services-banner {
+    background-image: url(../images/services.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+}
+
+.services-banner h2 {
+    color: #f2f2f2;
+    position: relative;
+    top: 40%;
+    font-size: 50px;
+}
+
+.bar img {
+    display: none;
+}
+
+.break {
+    padding: 4% 8%;
+}
+
+.break h3 {
+    color: #26a682;
+}
+
+.break p {
+    line-height: 50px;
+}
+
+.light-gray {
+    background-color: #f2f2f2;
+}
+
+.bowl img {
+    display: none;
+}
+
+.friends {
+    padding: 4% 8%;
+}
+
+.friends h3 {
+    color: #26a682;
+}
+
+.friends p {
+    line-height: 50px;
+}
+
+.subs {
+    background-color: #3c3b3a;
+    text-align: center;
+    padding: 8% 0%;
+}
+
+.subs p {
+    color: #f2f2f2;
+}
+
+.subscribe {
+    background-color: #26a682;
+    color: #f2f2f2;
+    text-decoration: none;
+    border: none;
+    width: 150px;
+    height: 45px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.fitness img {
+    display: none;
+}
+
+.new {
+    padding: 4% 8%;
+}
+
+.new h3 {
+    color: #26a682;
+}
+
+.new p {
+    line-height: 50px;
+}
+
+.climbing {
+    padding: 4% 8%;
+}
+
+.climbing h3 {
+    color: #26a682;
+}
+
+.climbing p {
+    line-height: 50px;
+}
+
+.climb img {
+    display: none;
+}
+
+.sponsors {
+    text-align: center;
+}
+
+.thankyou {
+    padding: 8%;
+    text-align: center;
+    font-size: 56px;
+}
+
+.icons {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons img {
+    height: auto;
+    padding: 4% 8%;
+}
+
+.icons img:nth-child(1) {
+    max-width: 400px;
+}
+
+.icons img:nth-child(4) {
+    max-width: 250px;
+}
+
+.icons img:nth-child(2),
+.icons img:nth-child(3) {
+    max-width: 300px;
+}
+
+/* TABLET STYLES */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        display: flex;
+        padding: 0 7%;
+    }
+
+    nav {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    nav a {
+        padding-left: 5%;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(1 , auto);
+        grid-template-rows: repeat(11, auto);
+    }
+
+    h1 {
+        font-size: 72px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    .construction p {
+        font-size: 24px;
+    }
+
+    .about-banner h2 {
+        font-size: 56px;
+    }
+
+    .www h2 {
+        font-size: 40px;
+    }
+
+    .services-banner h2 {
+        font-size: 56px;
+    }
+
+    .drinks {
+        display: flex;
+        padding: 10%;
+    }
+
+    .bar img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .bar {
+        width: 40%;
+    }
+
+    .break {
+        width: 60%;
+        padding: 0% 0% 0% 3%;
+    }
+
+    .light-gray {
+        display: flex;
+        padding: 10%;
+    }
+
+    .friends {
+        width: 60%;
+        padding: 0% 3% 0% 0%;
+    }
+
+    .bowl img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .bowl {
+        width: 40%;
+    }
+
+    .subs {
+        display: flex;
+        justify-content: center;
+        padding: 3% 0%;
+    }
+
+    .subs p {
+        padding-right: 22%;
+        font-size: 24px;
+    }
+
+    .subscribe {
+        font-size: 24px;
+    }
+
+    .gym {
+        display: flex;
+        padding: 10%;
+    }
+
+    .fitness img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .fitness {
+        width: 40%;
+    }
+
+    .new {
+        width: 60%;
+        padding: 0% 0% 0% 3%;
+    }
+
+    .climbing {
+        width: 60%;
+        padding: 0% 3% 0% 0%;
+    }
+
+    .climb img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .climb {
+        width: 40%;
+    }
+    
+    .sponsors {
+        text-align: center;
+    }
+
+    .icons {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* DESKTOP STYLES */
+@media only screen and (min-width: 1024px) {
+    .header {
+        display: flex;
+        padding: 0 7%;
+    }
+
+    nav {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    nav a {
+        padding-left: 5%;
+    }
+
+    h1 {
+        font-size: 72px;
+    }
+}
+
 /* FOOTER STYLES */
 .site-footer {
     background-color: #3c3b3a;
+    display: grid;
+    grid-template-columns: 28% 40% 28%;
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: 
+    "empty follow btp";
 }
 .follow {
+    grid-area: follow;
     text-align: center;
+    margin-bottom: 10%;
+    margin-top: 5%;
 }
 
 .follow h3 {
@@ -105,14 +508,31 @@ a:active {
     margin-left: 1%;
 }
 .btp {
-    text-align: end;
-    margin-right: 2%;
+    grid-area: btp;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 10%;
 }
+
+@keyframes rotation {
+    from {
+            transform: rotate(0deg);
+    }
+    to {
+            transform: rotate(359deg);
+    }
+}
+
 .btp i {
     color: #26a682;
     width: 20px;
     height: 20px;
+    animation: rotation 4s infinite linear;
 }
 .btp p {
     color: #f2f2f2;
+}
+
+.btp a {
+    text-decoration: none;
 }
