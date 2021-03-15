@@ -127,6 +127,23 @@ a:active {
     
 }
 
+.activities ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "bowling rock"
+    "center court";
+}
+
+.li-bowling {
+    grid-area: bowling;
+}
+
+.li-hiking {
+    grid-area: rock;
+}
+
 .activities p {
     color: #26a682;
     font-family: 'Raleway', sans-serif;
@@ -366,7 +383,7 @@ a:active {
         font-size: 18px;
     }
 
-    .activities {
+    .activities ul {
         display: flex;
         justify-content: space-evenly;
     }
@@ -476,7 +493,8 @@ a:active {
         "ent entertainment";
     }
     .scroll {
-        display: contents;
+        display: block;
+        grid-area: down;
     }
 
     .discover {
@@ -486,9 +504,12 @@ a:active {
 
     .activities {
         grid-area: icons;
+        margin: 1% 10%;
+    }
+
+    .activities ul {
         display: flex;
         justify-content: space-evenly;
-        margin: 1% 14% 1% 14%;
     }
 
     .started {
@@ -500,10 +521,6 @@ a:active {
 
     .reading {
         grid-area: img;
-    }
-
-    .scroll {
-        grid-area: down;
     }
 
     .school {
