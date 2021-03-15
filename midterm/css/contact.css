@@ -87,10 +87,11 @@ h3 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     color: #3c3b3a;
 }
 
+/* MOBILE STYLES */
 /* HEADER STYLES */
 .site-header {
     background-color: #3c3b3a;
@@ -115,7 +116,7 @@ a:active {
     font-weight: bolder;
 }
 
-/* BODY STYLES */
+/* MAIN BODY STYLES */
 main {
     display: grid;
     grid-template-columns: repeat(1, auto);
@@ -126,10 +127,13 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 .contact h2 {
     color: #f2f2f2;
     padding-top: 15px;
 }
+
+/* having the input labels and fields in a separate div (conform) inside a div (contact-form) for better spacing and responsiveness */
 .contact-form {
     background-color: #26a682;
     border-radius: 20px;
@@ -139,8 +143,7 @@ main {
     font-size: 14px;
     margin: 0 auto;
     line-height: 30px;
-    width: 80%;
-    
+    width: 80%; 
 }
 
 .conform { 
@@ -195,64 +198,19 @@ main {
 iframe {
     width: 100%;
 }
-
-/* --------------------- */
-/* FOOTER STYLES */
-.site-footer {
-    background-color: #3c3b3a;
-    display: grid;
-    grid-template-columns: 28% 40% 28%;
-    grid-template-rows: repeat(1, auto);
-    grid-template-areas: 
-    "empty follow btp";
-}
-.follow {
-    grid-area: follow;
-    text-align: center;
-    margin-bottom: 10%;
-    margin-top: 5%;
-}
-
-.follow h3 {
-    margin-bottom: 1%;
-    color: #f2f2f2;
-}
-.follow img {
-    margin-left: 1%;
-}
-.btp {
-    grid-area: btp;
-    text-align: center;
-    font-size: 35px;
-    margin-top: 10%;
-}
-
-@keyframes rotation {
-    from {
-            transform: rotate(0deg);
-    }
-    to {
-            transform: rotate(359deg);
-    }
-}
-
-.btp i {
-    color: #26a682;
-    width: 20px;
-    height: 20px;
-    animation: rotation 4s infinite linear;
-}
-.btp p {
-    color: #f2f2f2;
-}
-
-.btp a {
-    text-decoration: none;
-}
+/* MOBILE STYLES END */
 
 /* ------- TABLET --------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
+    h1 {
+        font-size: 72px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+    
     .header {
         display: flex;
         padding: 0 7%;
@@ -275,10 +233,19 @@ iframe {
         grid-template-rows: repeat(4, auto);
     }
 }
+/* TABLET STYLES END */
 
 /* --------- DESKTOP ---------- */
 @media only screen and (min-width: 1024px) {
    
+    h1 {
+        font-size: 72px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+    
     .header {
         display: flex;
         padding: 0 7%;
@@ -326,4 +293,59 @@ iframe {
         line-height: 42px;
         margin-bottom: 20%;
     }
+}
+
+/* FOOTER STYLES */
+/* forming a grid in order to align the elements properly in the center of the footer */
+.site-footer {
+    background-color: #3c3b3a;
+    display: grid;
+    grid-template-columns: 28% 40% 28%;
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: 
+    "empty follow btp";
+}
+.follow {
+    grid-area: follow;
+    text-align: center;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.follow h3 {
+    margin-bottom: 1%;
+    color: #f2f2f2;
+}
+.follow img {
+    margin-left: 1%;
+}
+.btp {
+    grid-area: btp;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 10%;
+}
+
+/* adding an infinite animation to the "back to top" icon where it rotates 360* on its axis and pauses for a second */
+@keyframes rotation {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(359deg);
+    }
+}
+
+.btp i {
+    color: #26a682;
+    width: 20px;
+    height: 20px;
+    animation: rotation 4s infinite linear;
+}
+.btp p {
+    color: #f2f2f2;
+}
+
+.btp a {
+    text-decoration: none;
 }

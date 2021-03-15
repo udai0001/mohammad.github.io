@@ -89,8 +89,9 @@ p {
     color: #3c3b3a;
     line-height: 38px;
 }
-
+/* MOBILE LAYOUT */
 /* HEADER STYLES */
+/* setting a background-color of the site header and aligning the elements to make them responsive */
 .site-header {
     background-color: #3c3b3a;
 }
@@ -127,6 +128,7 @@ a:active {
     
 }
 
+/* assigning grid template areas to icons for responsiveness and matching the mockup */
 .activities ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -171,18 +173,16 @@ a:active {
     text-align: center;
 }
 
+/* adding a floating/hovering type of animation on the main image that continues playing infinitely for enhancing user experience */
 @keyframes float {
 	0% {
-		
-		transform: translatey(0px);
+	transform: translatey(0px);
 	}
 	50% {
-		
-		transform: translatey(-25px);
+	transform: translatey(-25px);
 	}
 	100% {
-		
-		transform: translatey(0px);
+	transform: translatey(0px);
 	}
 }
 
@@ -194,16 +194,16 @@ a:active {
 	animation: float 4s ease-in-out infinite;
 }
 
+/* Adding a scroll down icon that takes you to the footer on action */
+/* hiding it in the mobile layout by using display none property */
 .scroll {
     text-align: center;
     font-size: 35px;
-    /* margin-bottom: 5%; */
     line-height: 1px;
 }
 
 .scroll i {
     color: #26a682;
-    /* display: block; */
 }
 
 .scroll {
@@ -227,10 +227,6 @@ a:active {
     color: #26a682;
 }
 
-.algonquin button {
-    
-}
-
 .btn2 {
     background-color: #26a682;
     color: #f2f2f2;
@@ -245,6 +241,7 @@ a:active {
     float: right;
 }
 
+/* setting a background color and changing styles for this section to meet the color scheme and mockup */
 .president {
     background-color: #3c3b3a;
     text-align: center;
@@ -271,6 +268,7 @@ a:active {
     border-radius: 300px;
     border: 5px solid #f2f2f2;
 }
+/* ------------------------------------------- */
 
 .entertainment img {
     max-width: 100%;
@@ -288,63 +286,12 @@ a:active {
 .ent h3 {
     color: #26a682;
 }
-
-/* FOOTER STYLES */
-.site-footer {
-    background-color: #3c3b3a;
-    display: grid;
-    grid-template-columns: 28% 40% 28%;
-    grid-template-rows: repeat(1, auto);
-    grid-template-areas: 
-    "empty follow btp";
-}
-.follow {
-    grid-area: follow;
-    text-align: center;
-    margin-bottom: 10%;
-    margin-top: 5%;
-}
-
-.follow h3 {
-    margin-bottom: 1%;
-    color: #f2f2f2;
-}
-.follow img {
-    margin-left: 1%;
-}
-.btp {
-    grid-area: btp;
-    text-align: center;
-    font-size: 35px;
-    margin-top: 10%;
-}
-
-@keyframes rotation {
-    from {
-            transform: rotate(0deg);
-    }
-    to {
-            transform: rotate(359deg);
-    }
-}
-
-.btp i {
-    color: #26a682;
-    width: 20px;
-    height: 20px;
-    animation: rotation 4s infinite linear;
-}
-.btp p {
-    color: #f2f2f2;
-}
-
-.btp a {
-    text-decoration: none;
-}
+/* MOBILE STYLE ENDS */
 
 /* ------- TABLET --------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
+    /* changing the alignment of the header by flexing it and aligning the elements in one straight line as the screen size increases */
     .header {
         display: flex;
         padding: 0 7%;
@@ -361,6 +308,7 @@ a:active {
         padding-left: 5%;
     }
     
+    /* adding a grid to the tablet layout for consistency */
     main {
         display: grid;
         grid-template-columns: repeat(1, auto);
@@ -383,6 +331,8 @@ a:active {
         font-size: 18px;
     }
 
+    /* using flex to align the icons in a straight line changing it from a grid in the mobile layout */
+
     .activities ul {
         display: flex;
         justify-content: space-evenly;
@@ -399,7 +349,7 @@ a:active {
     .scroll {
         display: contents;
     }
-
+    /* adjusting the width, height and margin of the container and of the image to match the the way it looks in the mockup, in order to achieve a cropped look */
     .school {
         width: 100%;
         height: 65%;
@@ -413,6 +363,7 @@ a:active {
         margin-top: -30%;
     }
 
+    /* using grid to change the layout of this section as the screen transitions  */
     .president {
         padding-bottom: 5%;
         display: grid;
@@ -440,6 +391,7 @@ a:active {
         padding-top: 10%;
     }
 
+    /* applying the same technique used for the "school" image above */
     .entertainment {
         width: 100%;
         height: 56%;
@@ -455,10 +407,9 @@ a:active {
     .ent {
         margin-top: -15%;
     }
-
-
 }
-
+/* LAPTOP STYLE ENDS */
+/* ------------------------------------------------------------ */
 /* DESKTOP LAYOUT */
 @media only screen and (min-width: 1024px) {
     
@@ -478,8 +429,8 @@ a:active {
         padding-left: 5%;
     }
     
+    /* Assigning grid-template-areas to the entire page in order to achieve the best responsive layout instead of dividing the page into nested grids; */
     main {
-        
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(7, auto);
@@ -571,6 +522,7 @@ a:active {
         margin: 10% 5% 1% -5%;
     }
 
+    /* changing the width, height and margin to match the look of the mockup */
     .school {
         width: 100%;
         height: 73%;
@@ -603,4 +555,59 @@ a:active {
         padding-right: 10%;
     }
 
+}
+
+/* FOOTER STYLES */
+/* forming a grid in order to align the elements properly in the center of the footer */
+.site-footer {
+    background-color: #3c3b3a;
+    display: grid;
+    grid-template-columns: 28% 40% 28%;
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: 
+    "empty follow btp";
+}
+.follow {
+    grid-area: follow;
+    text-align: center;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.follow h3 {
+    margin-bottom: 1%;
+    color: #f2f2f2;
+}
+.follow img {
+    margin-left: 1%;
+}
+.btp {
+    grid-area: btp;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 10%;
+}
+
+/* adding an infinite animation to the "back to top" icon where it rotates 360* on its axis and pauses for a second */
+@keyframes rotation {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(359deg);
+    }
+}
+
+.btp i {
+    color: #26a682;
+    width: 20px;
+    height: 20px;
+    animation: rotation 4s infinite linear;
+}
+.btp p {
+    color: #f2f2f2;
+}
+
+.btp a {
+    text-decoration: none;
 }
