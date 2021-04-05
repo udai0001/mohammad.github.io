@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <title>Bootstrap This!</title>
+  </head>
+  <body>
+    <!-- Header with bootstrap navigation -->
+    <!-- I used the bootstrap nav technique for this one as it was simple and didn't have any complex styles to be typed. I also went with the nav-tabs instead of the pills because I liked the overall look the tabs gave -->
+    <header id="btp">
+      <nav class="nav nav-tabs justify-content-around bg-dark flex-column flex-md-row">
+        <a class= "py-4 nav-item nav-link text-white text-center" href="index.html">Home</a>
+        <a class= "py-4 nav-item nav-link text-white text-center" href="#features">Features</a>
+        <a class= "py-4 nav-item nav-link text-white text-center" href="#instructions">Instructions</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- I used the jumbotron to give this part of the page a banner effect. I felt the spacing was quite perfect with the jumbotron in comparison to just adding a background to the div which would've caused additional styles like margin and padding -->
+      <div class="jumbotron bg-warning">
+        <h1 class="display-2 text-white text-center">All About Bootstrap!</h1>
+        <p class="lead text-center font-weight-normal">A brief guide you need to read before your first bootstrap encounter.</p>
+        <hr class="my-4 bg-white">
+        <p class="text-center">Bootstrap may look quite confusing in the beginning, but it gets easier once you get a hang of this amazing developing tool. To understand Bootstrap, one might need to have a basic understanding of HTML and CSS (of course) and all the basic elements that come with those languages.</p>
+      </div>
+      <div class="background container">
+          <h2>Background</h2>
+          <p>
+            Bootstrap was originally named “Twitter blueprint.” In the beginning, it was just made as a framework to endorse and support consistency across internal tools. Before Bootstrap, there were several libraries that were being used for the development of interfaces. A large number of libraries caused a lot of inconsistencies. Along with the actual developer, Mark Otto and a few colleagues (several other team members from Twitter) contributed to this project in the Twitter "Hack Week." Bootstrap was then introduced as an open source project. It had a twelve-column responsive grid layout system. It was no longer used solely as an internal tool maintainer for Twitter.
+            </p>
+      </div>
+      <hr class="mx-4 bg-warning">
+      <!-- For this part of the page (features) I used a container for the entire content of features to make it easier to add row and col classes. I also used the row and col classes as I did with the content in order to test out the responsive attribute of bootstrap. -->
+      <!-- Dividing the content into two columns as they exceed the large breakpoint was done so that the content would be easier to read and not stretched out on the screen -->
+      <div class="features container" id="features">
+          <h2>Why is Bootstrap used at a scale it is being used today?</h2>
+          <p>
+            It’s simple, fun and easy to understand! Bootstrap as an interface developing tool can do a lot of things. Here are some of the features that make Bootstrap a widely used tool:</p>
+            <div class="row">
+              <div class="col-md-6">
+                <h3>1. It is beginner friendly</h3>
+                <p>
+                  Anyone, literally anyone can use Bootstrap (of course a basic understanding of HTML and CSS is required), but as a tool that comes with pre-sets and components ready to be used, it doesn’t take much time to get started, which is probably the first reason why it is appealing.
+                </p>
+              </div>
+              <br>
+              <div class="col-md-6">
+                <h3>2. Easily Customizable</h3>
+                    <p>
+                      Even though Bootstrap is designed in responsive 12-column grids, layouts, and components, it is also very easy to customize. Whether you need a fixed grid or a responsive one, it can be made possible by making a few changes. Offsetting and nesting of columns are also easy to do in both CPU-based and mobile-based browser grids.
+                    </p>
+                
+                  </div>
+                </div>
+                <br>
+                  <div>
+                    <h3>3. Responsiveness</h3>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <p>
+                          Bootstrap is a responsive framework that incorporates a fluid 12 grid system for creating mobile ready websites. It uses two patterns depending on what the project demands and deems better:
+                          Firstly, we have the grid system, where one can use grids by laying down the 12 column width metrics for the website layout. Secondly, we have the flex system which allows faster and easier management of individual Bootstrap components like size of columns in the grid or the layout of content within a grid.
+                        </p>
+                      </div>
+                      <div class="col-lg-6">
+                        <p>
+                          Bootstrap also has Responsive Breakpoints. These breakpoints aid in building complex responsive layouts which are more straightforward due to the presence of five sets of classes. The five classes cover extra-large, large, medium, small, and extra-small screen widths.</p>
+                          <p>
+                            Bootstrap also has Sass variables and mixins, and dozens of predefined classes.</p>
+                      </div>
+                        </div>
+                  </div>
+                  <br>
+            <div>
+              <h3>4. Utilities</h3>
+              <p>Utilities is a part of Bootstrap that is responsible for CSS styling. CSS is the primary component that you need to utilize for customization. Some of the most useful utilities include –</p>
+              <!-- I divided the color utilities in three column layout for easy visuals and comparisons between each utility -->
+              <h3 class="font-weight-light pl-4">Color</h3>
+              <p class="pl-4">You can use the utility of color to add color to your text, background color, background gradient and also add styles to your links and their states.</p>
+              <div class="row">
+                <div class="col-lg-4">
+                  <p class="lead font-weight-bold pl-4">text color</p>
+                  <div class="jumbotron">
+                    <p class="text-primary">.text-primary</p>
+                    <p class="text-secondary">.text-secondary</p>
+                    <p class="text-success">.text-success</p>
+                    <p class="text-danger">.text-danger</p>
+                    <p class="text-warning">.text-warning</p>
+                    <p class="text-info">.text-info</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <p class="lead font-weight-bold pl-4">link color</p>
+                  <div class="jumbotron">
+                    <p><a href="#" class="text-primary">Primary link</a></p>
+                    <p><a href="#" class="text-secondary">Secondary link</a></p>
+                    <p><a href="#" class="text-success">Success link</a></p>
+                    <p><a href="#" class="text-danger">Danger link</a></p>
+                    <p><a href="#" class="text-warning">Warning link</a></p>
+                    <p><a href="#" class="text-info">Info link</a></p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <p class="lead font-weight-bold pl-4">background</p>
+                  <div class="jumbotron">
+                    <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+                    <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+                    <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+                    <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+                    <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+                    <div class="p-3 mb-2 bg-info text-white">.bg-info</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="font-weight-light pl-4">Borders</h3>
+              <p class="pl-4">Border utilities help in applying borders/border radius to elements. These are a great way to style buttons and images.</p>
+              <p class="pl-4">Borders can be of two types: Additive and Subtractive</p>
+                
+                  <div class="jumbotron bg-dark text-center">
+                    <span class=" text-warning border">border</span>
+                    <span class="mx-3 text-warning border-top">border</span>
+                    <span class="mx-3 text-warning border-right">border</span>
+                    <span class="mx-3 text-warning border-bottom">border</span>
+                    <span class="mx-3 text-warning border-left">border</span>
+                  </div>
+                  <p class="pl-4">Subtractive border utilities helps one from removing borders from an element. You can achieve that by simply putting a 0 after the border-top or border-right value, like this: <em>border-top-0</em></p>
+                  <br>
+
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <!-- Positioning and Spacing were also laid out for the same reason as that of easy legibility -->
+                      <h3 class="font-weight-light pl-4"> Positioning</h3>
+                      <p class="pl-4">These utilities help in determining the positioning of an element.</p>
+                      <p class="pl-4">A few common values in positioning include:</p>
+                      <ul>
+                        <li>position-static</li>
+                        <li>position-relative</li>
+                        <li>position-absolute</li>
+                        <li>position-fixed</li>
+                        <li>position-sticky</li>
+                      </ul>
+                      <p class="pl-4">
+                        Although they are quick and easy to use, they are not responsive in nature.
+                      </p>
+                    </div>
+                    <br>
+                    <div class="col-lg-6">
+                      <h3 class="font-weight-light pl-4">Spacing</h3>
+                      <p class="pl-4">Spacing is an essential utility which consists of both padding and margin, to help enhance the appearance of your elements.</p>
+                      <p> class="pl-4">Spacing is defined by two properties:</p>
+                      <ul>
+                        <li><em>m</em> stands for margin</li>
+                        <li><em>p</em> stands for padding</li>
+                      </ul>
+                      <p class="pl-4">Next are the sides:</p>
+                      <ul>
+                        <li><em>t</em> - stands for margin-top or padding-top</li>
+                        <li><em>b</em> - stands for margin-bottom or padding-bottom</li>
+                        <li><em>l</em> - stands for margin-left or padding-left</li>
+                        <li><em>r</em> - stands for margin-right or padding-right</li>
+                        <li><em>x</em> - stands for both left & right</li>
+                        <li><em>y</em> - stands for both top & bottom</li>
+                        <li><em>blank</em>stands for setting a margin or padding on all 4 sides of the element</li>
+                      </ul>
+                      <p class="pl-4"> Sizing of these margins and padding depends on numeric values ranging from 0-5 and then auto.</p>
+                    </div>
+                  </div>
+              <div class="bg-warning text-center jumbotron mx-0">
+                <p class="lead font-weight-normal">There are additional utilities like Text, Display, Flex, Float, Overflow, Sizing and many others. </p> 
+                <p class="lead font-weight-normal">Want to learn about all of them in detail? <a class="btn btn-dark" href="https://getbootstrap.com/docs/4.4/utilities/" role="button">Click Here!</a></p>
+              </div>
+            </div>
+            <div>
+              <!-- I wanted to try something new with the componenets area. I opted for the accordion component in order to break the monotony of the page and add some simple/smooth animation to the page for visual flavour. I had some difficulty in understanding the code for this component as it has a lot of divs and classes to be taken care of -->
+              <h3>5. Components</h3>
+              <p>Bootstrap has several components. You can choose whichever element your website design project demands. The lion's share of all Bootstrap components come with default breakpoints for fitting all screen sizes. Some of these components come with their JS integrated, so you don't have to worry about coding or editing the codes.</p>
+            </div>
+            <div class="accordion" id="accordionExample">
+              <div class="row">
+                <div class="col-lg-6">
+
+                  <div class="card">
+                    <div class="card-header bg-dark" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link text-warning" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Alerts
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>Alerts provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. Eg.,</p>
+                        
+                        <div class="alert alert-primary" role="alert">
+                          A simple primary alert—check it out!
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                          A simple secondary alert—check it out!
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                          A simple success alert—check it out!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="card">
+                    <div class="card-header bg-dark" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed text-warning" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Badges
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>Badges are great components that come handy while labelling elements on a website. Eg.,</p>
+                        <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+                        
+                        <p>Badges can be used as part of links or buttons to provide a counter.</p>
+                        <button type="button" class="btn btn-primary">
+                          Notifications <span class="badge badge-light">4</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="card">
+                      <div class="card-header bg-dark" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link collapsed text-warning" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Breadcrumb
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                          <p>Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS. Eg.,</p>
+                          <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item active" aria-current="page">Home</li>
+                            </ol>
+                          </nav>
+                          
+                          <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="#">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Library</li>
+                            </ol>
+                          </nav>
+                          
+                          <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="#">Home</a></li>
+                              <li class="breadcrumb-item"><a href="#">Library</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Data</li>
+                            </ol>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="card">
+                      <div class="card-header bg-dark" id="headingFour">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link collapsed text-warning" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Buttons
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                        <div class="card-body">
+                          <p>Bootstrap buttons come in the same colors as the text colors (default). One can use these buttons in in forms, dialogs, and more with support for multiple sizes, states, and more. Eg.,</p>
+                          <button type="button" class="btn btn-primary">Primary</button>
+                          <button type="button" class="btn btn-info">Secondary</button>
+                          <button type="button" class="btn btn-success">Success</button>
+                          <button type="button" class="btn btn-danger">Danger</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="card">
+                    <div class="card-header bg-dark" id="headingFive">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed text-warning" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          Cards
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards. Eg.,</p>
+                        <div class="card" style="width: 18rem;">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <br>
+            <div class="bg-warning text-center jumbotron mx-0">
+              <p class="lead font-weight-normal">There are additional components like Modals, List Groups, Dropdowns, Carousel, Forms, Spinners and many others. </p> 
+              <p class="lead font-weight-normal">Want to learn about all of them in detail? <a class="btn btn-dark" href="https://getbootstrap.com/docs/4.4/components/" role="button">Click Here!</a></p>
+            </div>
+            <hr class="bg-warning">
+
+            <h2>Drawback of Bootstrap</h2>
+            <p>Everything has its pros and cons. We have talked about the features that make Bootstrap appealing. Now we will discuss a few flaws and drawbacks of Bootstrap. One of the biggest drawbacks is its free availability. Since it is a "Free for all" program, there are higher chances of people using common themes on their individual websites. Now, there is big competition to develop the most unique and different website using the same library that maybe 10,000+ people are already using or have used. Due to increased use in this modern day and time where websites have such a big part of a person’s everyday life, it has become quite easy to determine which websites and applications have used the same template unless they have been heavily and massively customized.</p>
+
+            <hr class="bg-warning">
+            <h2 id="instructions">Instructions</h2>
+            <p>So now that you learnt a few things about Bootstrap and its features, it is time that we jumped into the real thing.</p>
+            <ol>
+              <li>The first thing you will have to do is get the starter template of the latest version of Bootstrap. <br> <br>
+                <a class="btn btn-dark" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" role="button">Click Here!</a> to get the Starter template.
+              </li>
+              <br>
+              <li>The next step is to open up a coding software like VSCode and paste the Starter template that you will copy from Bootstrap.</li>
+              <br>
+              <li>Now that you have the default/starter template, you can add componenets and utilitites to your website. This framework will not only give you a clear slate and idea, but it will also provide you with enough tools to create a responsive website without using a lot of CSS.</li>
+              <br>
+              <li>You can also watch the following video for some quick brushing up and tips.</li>
+              <br>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/yalxT0PEx8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </ol>
+            <hr class="bg-warning">
+            <div class="d-flex flex-column">
+              <a class= "text-dark" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Source #1</a>
+              <a class= "text-dark" href="https://dzone.com/articles/bootstrap-and-its-features">Source #2</a>
+              <a class= "text-dark" href="https://www.hostreview.com/blog/191031-what-are-the-five-essential-features-of-bootstrap-you-should-remember-before-getting-down-to-work">Source #3</a>
+            </div>
+      </div>
+    </main>
+    <br>
+
+    <footer class="bg-dark py-3">
+      <div class="text-center">
+        <p class="text-warning font-weight-light">&copy;All About Bootstrap <br> All Rights Reserved</p>
+      </div>
+      <div class="d-flex justify-content-end pr-2">
+        <a class="btn btn-dark justify-end" href="#btp" role="button">Back to top</a>
+      </div>
+    </footer>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
